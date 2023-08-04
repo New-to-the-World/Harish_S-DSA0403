@@ -1,23 +1,21 @@
 import numpy as np
-def cal_tot_marks_and_percentage_increase(sales_q1,sales_q2,sales_q3,sales_q4):
-    #total sales of the year
-    tot_sales=sales_q1+sales_q2+sales_q3+sales_q4
-    
-    #percentage increases from Q1 to Q4
-    percentage_increase=((sales_q4-sales_q1)/sales_q1*100)
-    return tot_sales,percentage_increase
-def new_func(cal_tot_marks_and_percentage_increase, sales_q1, sales_q2, sales_q3, sales_q4):
-    tot_sales,percentage_increase=cal_tot_marks_and_percentage_increase(sales_q1,sales_q2,sales_q3,sales_q4)
-    return tot_sales,percentage_increase
 
-if __name__=="__main__":
-    #quaterly sales data
-    sales_q1=np.array([1000,1200,1500])
-    sales_q2=np.array([1300,1400,1600])
-    sales_q3=np.array([1100,1250,1450])
-    sales_q4=np.array([1400,1600,1800])
-    
-    #calculate total sales and percentage increase
-    tot_sales, percentage_increase = new_func(cal_tot_marks_and_percentage_increase, sales_q1, sales_q2, sales_q3, sales_q4)
-    print("total sales of the year:",tot_sales)
-    print("percentage incerases from Q1 to Q4",percentage_increase)
+# Quarterly sales data for the year
+sales_q1 = np.array([100000, 120000, 130000])  # Sales for Q1 (in dollars)
+sales_q2 = np.array([110000, 125000, 140000])  # Sales for Q2 (in dollars)
+sales_q3 = np.array([120000, 135000, 150000])  # Sales for Q3 (in dollars)
+sales_q4 = np.array([130000, 145000, 160000])  # Sales for Q4 (in dollars)
+
+# Calculate total sales for the year
+total_sales = sales_q1 + sales_q2 + sales_q3 + sales_q4
+
+# Sum up the total sales for the year
+total_sales_year = np.sum(total_sales)
+
+# Calculate percentage increase from Q1 to Q4
+percentage_increase = ((sales_q4 - sales_q1) / sales_q1) * 100
+percentage_increase_year = np.mean(percentage_increase)  # Calculate the average increase across all categories
+
+# Print the results
+print("Total sales for the year:", total_sales_year)
+print("Percentage increase from Q1 to Q4:", percentage_increase_year)
