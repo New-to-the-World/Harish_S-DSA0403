@@ -1,4 +1,5 @@
 import math
+from scipy import stats
 
 def calculate_sample_size(confidence_level, precision, population_stddev=None):
     # Z-score for the given confidence level
