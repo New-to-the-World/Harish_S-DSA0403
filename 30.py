@@ -13,12 +13,9 @@ def main():
     # Load the car dataset (replace this with your own dataset)
     # Replace 'X' with the features and 'y' with the target variable (price) of your dataset
     X = np.array([[10000, 5, 1, 0], [20000, 3, 2, 1], [15000, 4, 0, 0]])  # Sample feature data
-    y = np.array([25000, 30000, 20000])  # Sample target data (car prices)
-
-    # Get the feature names (replace this with your actual feature names)
+    y = np.array([25000, 30000, 20000])  
     feature_names = ["mileage", "age", "brand", "engine_type"]
 
-    # Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
     # Create a Decision Tree Regressor
