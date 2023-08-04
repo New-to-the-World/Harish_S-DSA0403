@@ -5,7 +5,6 @@ from nltk.tokenize import word_tokenize
 import string
 import matplotlib.pyplot as plt
 
-# Replace 'data.csv' with the actual path to your CSV file if it's not in the current working directory.
 file_path = 'C:/Users/mailm/Downloads/data.csv'
 
 # Load the CSV file into a DataFrame
